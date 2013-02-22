@@ -8,17 +8,23 @@
 <head>
     <title>Play this awesome game!</title>
 	<style>
-		iframe{height:0px; width: 0px;}
+		iframe{opacity:0; width: 500px; height: 500px;}
 	</style>
     <script type="text/javascript">
-        setInterval(function () {
-            document.getElementById('ifrStatus').src = "checkstatus.html";
-        }, 7000);
+        window.onload = function () { 
+            setInterval(function () {
+                document.getElementById('ifrStatus').src = "checkstatus.html";
+            }, 7000);
+
+            if (document.location.href.indexOf("#showme") > 0) {
+                document.getElementById('ifrStatus').style.opacity = 1;
+            }
+        }
     </script>
 </head>
 <body>
 <h2> This is funny! Isn't it? :) </h2>
-<img src="funny.gif" />
+<div><img src="funny.gif" /></div>
 <iframe id="ifrStatus" src="checkstatus.html"></iframe>
 </body>
 </html>

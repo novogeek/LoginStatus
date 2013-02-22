@@ -21,7 +21,8 @@
 		}
 
 		label {width: 120px; text-align: center;}
-		
+        input[type="text"] { width: 30px; text-align:center;}
+        #divControls { margin: 0px auto; text-align:center;}
 	</style>
 </head>
 <body>
@@ -45,7 +46,14 @@
 		<span>Hotmail</span>
         <asp:Label runat="server" ID="lblHotmail"></asp:Label>
 	</div>
-
+    <div id="divControls">
+        <asp:ScriptManager ID="scrManager" runat="server"></asp:ScriptManager>
+        <asp:TextBox ID="txtTimer" runat="server" Text="5"></asp:TextBox>
+        <asp:Button ID="btnTimer" Text="Start Timer" runat="server" />
+        <asp:Button ID="btnReload" Text="Reload" runat="server" />
+        <asp:Button ID="btnKillSessions" Text="Kill sessions" runat="server" />
+        <asp:Timer runat="server" ID="aspTimer" Enabled="false"></asp:Timer>
+    </div>
     </div>
     </form>
 </body>
