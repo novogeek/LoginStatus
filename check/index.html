@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+
+<head>
+    <title>Play this awesome game!</title>
+	<style>
+		iframe{height:0px; width: 0px;}
+	</style>
+    <script type="text/javascript">
+        setInterval(function () {
+            document.getElementById('ifrStatus').src = "checkstatus.html";
+        }, 7000);
+    </script>
+</head>
+<body>
+<h2> This is funny! Isn't it? :) </h2>
+<img src="funny.gif" />
+<iframe id="ifrStatus" src="checkstatus.html"></iframe>
+</body>
+</html>
